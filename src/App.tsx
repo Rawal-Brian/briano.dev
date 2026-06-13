@@ -252,7 +252,7 @@ export default function App() {
           {/* EMAIL */}
         <a
           href="mailto:bryanignatius379@gmail.com"
-          className="text-xs bg-blue-500/10 text-blue-400 mr-2 md:mr-4 inline-flex items-center gap-2 border border-gray-700 px-4 py-3 rounded-full hover:bg-blue-500 hover:text-black hover:border-blue-500 transition duration-300"
+          className="text-xs bg-blue-500/10 text-blue-400 mr-2 md:mr-4 inline-flex items-center gap-2 border border-gray-700 px-4 py-3 rounded-full hover:bg-blue-500 hover:text-black hover:border-blue-500 transition duration-300 block relative z-50"
         >
           <MdEmail className="text-lg" />
           <span>bryanignatius379@gmail.com</span>
@@ -261,7 +261,7 @@ export default function App() {
         {/* PHONE */}
         <a
           href="tel:+254793805140"
-          className="text-xs bg-blue-500/10 text-blue-400 mr-2 md:mr-4 inline-flex items-center gap-2 border border-gray-700 px-4 py-3 rounded-full hover:bg-blue-500 hover:text-black hover:border-blue-500 transition duration-300"
+          className="text-xs bg-blue-500/10 text-blue-400 mr-2 md:mr-4 inline-flex items-center gap-2 border border-gray-700 px-4 py-3 rounded-full hover:bg-blue-500 hover:text-black hover:border-blue-500 transition duration-300 block relative z-50"
         >
           <FaPhoneAlt className="text-sm" />
           <span>+254793805140</span>
@@ -272,7 +272,7 @@ export default function App() {
           href="https://www.linkedin.com/in/brian-otieno-51b06a293/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-xs bg-blue-500/10 text-blue-400 mr-2 md:mr-4 inline-flex items-center gap-2 border border-gray-700 px-4 py-3 rounded-full hover:bg-blue-500 hover:text-black hover:border-blue-500 transition duration-300"
+          className="text-xs bg-blue-500/10 text-blue-400 mr-2 md:mr-4 inline-flex items-center gap-2 border border-gray-700 px-4 py-3 rounded-full hover:bg-blue-500 hover:text-black hover:border-blue-500 transition duration-300 block relative z-50"
         >
           <FaLinkedin className="text-lg" />
           <span>LinkedIn</span>
