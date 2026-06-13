@@ -151,6 +151,13 @@ export default function App() {
               tech: ["C#", ".NET", "HTML", "CSS"],
               link: "https://github.com/Rawal-Brian/ServiceStack.Benchmarks",
             },
+            {
+              name: "Okellooregeart Website",
+              desc: "Complete website development with integrated digital marketing features, social media management tools, and content management system.",
+              tech: ["React", "TypeScript", "Tailwind CSS", "CMS"],
+              link: "https://github.com/E-Gilbert/oregeart",
+              demo: "https://okellooregeart.com/",
+            },
           ].map((proj) => (
             <div
               key={proj.name}
