@@ -14,7 +14,7 @@ export default function App() {
       {/* NAVBAR */}
     <nav className="flex items-center justify-between px-4 md:px-6 py-4 border-b border-gray-800">
       <h1 className="text-lg font-bold truncate">
-        Brian Otieno
+        Brian Ignatious Otieno
       </h1>
 
       <a
@@ -253,8 +253,7 @@ export default function App() {
           <a
             href="tel:+254793805140"
             rel="noopener noreferrer"
-            className="shrink-0 block text-base md:text-lg bg-white/5 border border-blue-400/30 rounded-full px-3 py-4 hover:bg-blue-500 hover:shadow-[0_0_12px_rgba(59,130,246,0.9)] transition"
-            //className="text-xs bg-blue-500/10 text-blue-400 px-7 py-3 rounded-full border border-blue-400/30 shadow-[0_0_6px_rgba(59,130,246,0.5)] hover:shadow-[0_0_12px_rgba(59,130,246,0.9)] transition"
+            className="shrink-0 block text-base md:text-lg bg-white/5 border border-blue-400/30 rounded-full px-1 py-4 hover:bg-blue-500 hover:shadow-[0_0_12px_rgba(59,130,246,0.9)] transition"
           >
             📞 +254 793 805 140
           </a>
