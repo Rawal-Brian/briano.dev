@@ -231,7 +231,7 @@ export default function App() {
           {/* EMAIL */}
           <a
             href="mailto:bryanignatius379@gmail.com"
-            className="block text-base md:text-lg bg-white/5 border border-white/10 rounded-lg py-3 px-4 hover:bg-blue-500 hover:scale-105 transition"
+            className="block text-base md:text-lg bg-white/5 border border-white/10 rounded-lg py-3 px-4 hover:bg-blue-500 hover:scale-105 transition block relative z-50"
           >
             📧 bryanignatius379@gmail.com
           </a>
@@ -239,7 +239,7 @@ export default function App() {
           {/* PHONE */}
           <a
             href="tel:+254793805140"
-            className="block text-base md:text-lg bg-white/5 border border-white/10 rounded-lg py-3 px-4 hover:bg-blue-500 hover:scale-105 transition"
+            className="block text-base md:text-lg bg-white/5 border border-white/10 rounded-lg py-3 px-4 hover:bg-blue-500 hover:scale-105 transition block relative z-50"
           >
             📱 +254 793 805 140
           </a>
