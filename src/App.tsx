@@ -1,5 +1,7 @@
 import profile from "./assets/profile.jpg";
 import { motion } from "framer-motion";
+import { MdEmail } from "react-icons/md";
+import { FaPhoneAlt, FaLinkedin } from "react-icons/fa";
 
 
 export default function App() {
@@ -239,7 +241,7 @@ export default function App() {
         transition={{ duration: 0.6 }}
         className="mt-24 text-center pb-20 px-6"
       >
-        <h2 className="text-3xl font-semibold">Contact</h2>
+        <h2 className="text-3xl font-semibold">Let's Connect & Collaborate!</h2>
 
         <p className="text-gray-400 mt-4">
           Open to collaboration, automation consulting, and leadership roles.
@@ -248,22 +250,33 @@ export default function App() {
         <div className="mt-6 space-y-4 max-w-md mx-auto">
 
           {/* EMAIL */}
-          <a
-            href="mailto:bryanignatius379@gmail.com"
-            rel="noopener noreferrer"
-            className="shrink-0 block text-base md:text-lg bg-white/5 border border-blue-400/30 rounded-full px-3 py-4 hover:bg-blue-500 hover:shadow-[0_0_12px_rgba(59,130,246,0.9)] transition block relative z-50"
-          >
-            📩 bryanignatius379@gmail.com
-          </a>
+        <a
+          href="mailto:bryanignatius379@gmail.com"
+          className="text-xs bg-blue-500/10 text-blue-400 mr-2 md:mr-4 inline-flex items-center gap-2 border border-gray-700 px-4 py-3 rounded-full hover:bg-blue-500 hover:text-black hover:border-blue-500 transition duration-300"
+        >
+          <MdEmail className="text-lg" />
+          <span>bryanignatius379@gmail.com</span>
+        </a>
 
-          {/* PHONE */}
-          <a
-            href="tel:+254793805140"
-            rel="noopener noreferrer"
-            className="shrink-0 block text-base md:text-lg bg-white/5 border border-blue-400/30 rounded-full px-1 py-4 hover:bg-blue-500 hover:shadow-[0_0_12px_rgba(59,130,246,0.9)] transition block relative z-50"
-          >
-            📞 +254 793 805 140
-          </a>
+        {/* PHONE */}
+        <a
+          href="tel:+254793805140"
+          className="text-xs bg-blue-500/10 text-blue-400 mr-2 md:mr-4 inline-flex items-center gap-2 border border-gray-700 px-4 py-3 rounded-full hover:bg-blue-500 hover:text-black hover:border-blue-500 transition duration-300"
+        >
+          <FaPhoneAlt className="text-sm" />
+          <span>+254793805140</span>
+        </a>
+
+        {/* LINKEDIN */}
+        <a
+          href="https://www.linkedin.com/in/brian-otieno-51b06a293/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs bg-blue-500/10 text-blue-400 mr-2 md:mr-4 inline-flex items-center gap-2 border border-gray-700 px-4 py-3 rounded-full hover:bg-blue-500 hover:text-black hover:border-blue-500 transition duration-300"
+        >
+          <FaLinkedin className="text-lg" />
+          <span>LinkedIn</span>
+        </a>
 
         </div>
       </motion.section>
