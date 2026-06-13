@@ -19,7 +19,7 @@ export default function App() {
         <a
           href="https://github.com/Rawal-Brian"
           target="_blank"
-          className="border border-gray-700 px-4 py-2 rounded-lg hover:bg-blue-500 hover:text-black transition"
+          className="border border-gray-700 px-4 py-2 rounded-lg hover:bg-blue-500 hover:text-black transition items-right flex gap-2 justify-center"
         >
           GitHub
         </a>
