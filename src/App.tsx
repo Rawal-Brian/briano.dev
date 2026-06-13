@@ -233,7 +233,7 @@ export default function App() {
       </motion.section>
 
 
-      {/* CONTACT */}
+       {/* CONTACT */}
       
       <motion.section
         initial={{ opacity: 0, y: 50 }}
@@ -280,6 +280,13 @@ export default function App() {
 
         </div>
       </motion.section>
+
+      {/* Footer */}
+      <footer className="mt-24 py-8 text-center border-t border-gray-800">
+        <p className="text-gray-400 text-sm">
+          © {new Date().getFullYear()} Brian Ignatious Otieno. All Rights Reserved.
+        </p>
+      </footer>
 
     </div>
   );
