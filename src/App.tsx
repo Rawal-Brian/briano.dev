@@ -80,8 +80,8 @@ export default function App() {
       <h2 className="text-3xl font-semibold mb-6">About Me</h2>
 
       <p className="text-gray-400 leading-relaxed">
-        I am an Automation Software Testing Software Testing & Quality Specialist with expertise in Playwright
-        and TypeScript, specializing in building scalable automation frameworks for
+        I am an Automation Software Tester, programmer & Quality Specialist with expertise in Playwright
+        and TypeScript, CSS, JavaScript, HTML, Python, specializing in building scalable automation frameworks for
         enterprise applications. I have hands-on experience in
         validating complex data systems, managing cloud-based databases such as
         Snowflake, Oracle, PostgreSQL, and SQL Server.
