@@ -11,20 +11,19 @@ export default function App() {
     <div className="max-w-5xl mx-auto px-6"></div>
 
       
-      {/* NAVBAR */}
-      <nav className="flex flex-col md:flex-row justify-between items-left p-6 border-b border-gray-800 gap-4">
-        <h1 className="text-xl font-bold">Brian Otieno</h1>
+      <nav className="flex items-center justify-between p-4 border-b border-gray-800 gap-2">
+        <h1 className="text-lg font-bold truncate">
+          Brian Otieno
+        </h1>
 
-        
         <a
           href="https://github.com/Rawal-Brian"
           target="_blank"
           rel="noopener noreferrer"
-          className="border border-gray-700 px-3 py-1 rounded-lg hover:bg-blue-500 hover:text-black transition"
+          className="shrink-0 border border-gray-700 px-3 py-2 text-xs rounded-lg hover:bg-blue-500 hover:text-black transition"
         >
           GitHub
         </a>
-
       </nav>
 
       
