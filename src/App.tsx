@@ -20,10 +20,10 @@ export default function App() {
           href="https://github.com/Rawal-Brian"
           target="_blank"
           rel="noopener noreferrer"
-          className="border border-gray-700 px-2 py-1 text-sm sm:px-3 sm:py-1.5 sm:text-base rounded-lg hover:bg-blue-500 hover:text-black transition"
+          className="border border-gray-700 px-3 py-1 rounded-lg hover:bg-blue-500 hover:text-black transition"
         >
           GitHub
-      </a>
+        </a>
 
       </nav>
 
