@@ -12,14 +12,14 @@ export default function App() {
 
       
       {/* NAVBAR */}
-      <nav className="flex flex-col md:flex-row justify-between items-center p-6 border-b border-gray-800 gap-4">
+      <nav className="flex flex-col md:flex-row justify-between items-left p-6 border-b border-gray-800 gap-4">
         <h1 className="text-xl font-bold">Brian Otieno</h1>
 
         
         <a
           href="https://github.com/Rawal-Brian"
           target="_blank"
-          className="border border-gray-700 px-4 py-2 rounded-lg hover:bg-white hover:text-black transition"
+          className="border border-gray-700 px-4 py-2 rounded-lg hover:bg-blue-500 hover:text-black transition"
         >
           GitHub
         </a>
@@ -31,9 +31,9 @@ export default function App() {
       <h2 className="text-3xl font-semibold mb-6">About Me</h2>
 
       <p className="text-gray-400 leading-relaxed">
-        I am an Automation Software Testing Team Lead with expertise in Playwright
+        I am an Automation Software Testing Software Testing & Quality Specialist with expertise in Playwright
         and TypeScript, specializing in building scalable automation frameworks for
-        enterprise applications like Bold BI. I have hands-on experience in
+        enterprise applications. I have hands-on experience in
         validating complex data systems, managing cloud-based databases such as
         Snowflake, Oracle, PostgreSQL, and SQL Server.
         <br /><br />
@@ -61,7 +61,7 @@ export default function App() {
           className="text-3xl md:text-5xl font-bold leading-tight drop-shadow-[0_0_25px_rgba(59,130,246,0.7)]"
         >
           Automation Testing <br />
-          <span className="text-blue-500">Team Lead</span>
+          <span className="text-blue-500">Software Development Engineer in Test (SDET)</span>
         </motion.h1>
 
       </section>
