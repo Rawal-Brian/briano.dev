@@ -6,7 +6,7 @@ import { FaPhoneAlt, FaLinkedin } from "react-icons/fa";
 
 export default function App() {
   return (
-    <div className="bg-gradient-to-b from-black via-gray-900 to-black text-white min-h-screen font-sans relative overflow-hidden">
+    <div className="bg-gradient-to-b from-black via-gray-900 to-black text-white min-h-screen font-sans relative overflow-hidden pt-24">
       
     <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 opacity-20 blur-3xl rounded-full"></div>
     <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-500 opacity-20 blur-3xl rounded-full"></div>
@@ -14,31 +14,31 @@ export default function App() {
 
       
       {/* NAVBAR */}
-    <nav className="flex items-center justify-between px-4 md:px-6 py-4 border-b border-gray-800">
-      <h1 className="text-lg font-bold truncate">
-        Brian Ignatious Otieno
-      </h1>
+      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 md:px-6 py-4 border-b border-gray-800 bg-black/80 backdrop-blur-md">
+        <h1 className="text-lg font-bold truncate">
+          Brian Ignatious Otieno
+        </h1>
 
-      <a
-        href="https://github.com/Rawal-Brian"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mr-2 md:mr-4 inline-flex items-center gap-2 border border-gray-700 px-3 py-2 text-sm rounded-lg hover:bg-blue-500 hover:text-black transition"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="18"
-          height="18"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          className="text-white/80"
+        <a
+          href="https://github.com/Rawal-Brian"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mr-2 md:mr-4 inline-flex items-center gap-2 border border-gray-700 px-3 py-2 text-sm rounded-lg hover:bg-blue-500 hover:text-black transition"
         >
-          <path d="M12 0C5.37 0 0 5.37 0 12C0 16.97 3.438 21.157 8.205 22.385C8.805 22.498 9.025 22.127 9.025 21.77C9.025 21.447 9.012 20.385 9.008 19.11C5.672 19.843 4.968 17.726 4.968 17.726C4.422 16.341 3.633 15.957 3.633 15.957C2.545 15.213 3.717 15.229 3.717 15.229C4.922 15.313 5.555 16.466 5.555 16.466C6.625 18.301 8.362 17.771 9.05 17.465C9.158 16.69 9.468 16.164 9.81 15.864C7.145 15.559 4.344 14.532 4.344 9.933C4.344 8.623 4.813 7.551 5.579 6.711C5.455 6.408 5.043 5.187 5.696 3.535C5.696 3.535 6.704 3.213 8.997 4.765C9.979 4.498 11.003 4.362 12.027 4.356C13.051 4.362 14.075 4.498 15.057 4.765C17.35 3.213 18.358 3.535 18.358 3.535C19.011 5.187 18.599 6.408 18.475 6.711C19.241 7.551 19.71 8.623 19.71 9.933C19.71 14.543 16.904 15.556 14.234 15.852C14.666 16.223 15.057 16.954 15.057 18.074C15.057 19.679 15.043 21.338 15.043 21.77C15.043 22.13 15.261 22.503 15.865 22.385C20.565 21.154 24 16.97 24 12C24 5.37 18.63 0 12 0Z" />
-        </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="text-white/80"
+          >
+            <path d="M12 0C5.37 0 0 5.37 0 12C0 16.97 3.438 21.157 8.205 22.385C8.805 22.498 9.025 22.127 9.025 21.77C9.025 21.447 9.012 20.385 9.008 19.11C5.672 19.843 4.968 17.726 4.968 17.726C4.422 16.341 3.633 15.957 3.633 15.957C2.545 15.213 3.717 15.229 3.717 15.229C4.922 15.313 5.555 16.466 5.555 16.466C6.625 18.301 8.362 17.771 9.05 17.465C9.158 16.69 9.468 16.164 9.81 15.864C7.145 15.559 4.344 14.532 4.344 9.933C4.344 8.623 4.813 7.551 5.579 6.711C5.455 6.408 5.043 5.187 5.696 3.535C5.696 3.535 6.704 3.213 8.997 4.765C9.979 4.498 11.003 4.362 12.027 4.356C13.051 4.362 14.075 4.498 15.057 4.765C17.35 3.213 18.358 3.535 18.358 3.535C19.011 5.187 18.599 6.408 18.475 6.711C19.241 7.551 19.71 8.623 19.71 9.933C19.71 14.543 16.904 15.556 14.234 15.852C14.666 16.223 15.057 16.954 15.057 18.074C15.057 19.679 15.043 21.338 15.043 21.77C15.043 22.13 15.261 22.503 15.865 22.385C20.565 21.154 24 16.97 24 12C24 5.37 18.63 0 12 0Z" />
+          </svg>
 
-        <span>GitHub</span>
-      </a>
-    </nav>
+          <span>GitHub</span>
+        </a>
+      </nav>
 
       
     <section className="mt-20 text-center px-6 max-w-3xl mx-auto">
