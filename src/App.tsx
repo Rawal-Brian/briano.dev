@@ -244,7 +244,7 @@ export default function App() {
           <a
             href="mailto:bryanignatius379@gmail.com"
             rel="noopener noreferrer"
-            className="shrink-0 block text-base md:text-lg bg-white/5 border border-white/10 rounded-lg py-3 px-4 hover:bg-blue-500 hover:scale-105 transition block relative z-50"
+            className="shrink-0 block text-base md:text-lg bg-white/5 border border-blue-400/30 rounded-full px-3 py-4 hover:bg-blue-500 hover:shadow-[0_0_12px_rgba(59,130,246,0.9)] transition"
           >
             📩 bryanignatius379@gmail.com
           </a>
@@ -253,7 +253,8 @@ export default function App() {
           <a
             href="tel:+254793805140"
             rel="noopener noreferrer"
-            className=" shrink-0 block text-base md:text-lg bg-white/5 border border-white/10 rounded-lg py-3 px-4 hover:bg-blue-500 hover:scale-105 transition block relative z-50"
+            className="shrink-0 block text-base md:text-lg bg-white/5 border border-blue-400/30 rounded-full px-3 py-4 hover:bg-blue-500 hover:shadow-[0_0_12px_rgba(59,130,246,0.9)] transition"
+            //className="text-xs bg-blue-500/10 text-blue-400 px-7 py-3 rounded-full border border-blue-400/30 shadow-[0_0_6px_rgba(59,130,246,0.5)] hover:shadow-[0_0_12px_rgba(59,130,246,0.9)] transition"
           >
             📞 +254 793 805 140
           </a>
