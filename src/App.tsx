@@ -19,10 +19,11 @@ export default function App() {
         <a
           href="https://github.com/Rawal-Brian"
           target="_blank"
-          className="border border-gray-700 px-4 py-2 rounded-lg hover:bg-blue-500 hover:text-black transition items-right flex gap-2 justify-right"
+          rel="noopener noreferrer"
+          className="border border-gray-700 px-2 py-1 text-sm sm:px-3 sm:py-1.5 sm:text-base rounded-lg hover:bg-blue-500 hover:text-black transition"
         >
           GitHub
-        </a>
+      </a>
 
       </nav>
 
