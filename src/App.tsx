@@ -2,9 +2,44 @@ import profile from "./assets/profile.jpg";
 import { motion } from "framer-motion";
 import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt, FaLinkedin } from "react-icons/fa";
-
+import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react";
 
 export default function App() {
+  const form = useRef<HTMLFormElement | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    setSuccess(false);
+    setLoading(true);
+
+    emailjs
+      .sendForm(
+        "service_96qhcei",
+        "template_9w7g8jk",
+        form.current!,
+        "AfEt6Jyx7a5yX0cqw"
+      )
+      .then(
+        () => {
+          setLoading(false);
+          setSuccess(true);
+          form.current?.reset();
+
+          setTimeout(() => {
+            setSuccess(false);
+          }, 2000);
+        },
+        () => {
+          setLoading(false);
+          alert("Message failed to send. Try again.");
+        }
+      );
+  };
+
   return (
     <div className="bg-gradient-to-b from-black via-gray-900 to-black text-white min-h-screen font-sans relative overflow-hidden pt-24">
       
@@ -233,59 +268,114 @@ export default function App() {
       </motion.section>
 
 
-       {/* CONTACT */}
-      
-      <motion.section
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="mt-24 text-center pb-20 px-6"
-      >
-        <h2 className="text-3xl font-semibold">Let's Connect & Collaborate!</h2>
+       {/* FOOTER */}
+      <footer className="mt-24 border-t border-gray-800 bg-black/40 backdrop-blur-md">
 
-        <p className="text-gray-400 mt-4">
-          Open to collaboration, automation consulting, and leadership roles.
-        </p>
+        <div className="max-w-5xl mx-auto px-6 py-10 text-center">
 
-        <div className="mt-6 space-y-4 max-w-md mx-auto">
+          {/* TITLE */}
+          <h3 className="text-xl font-semibold mb-4">
+            Let's Connect & Collaborate
+          </h3>
 
-          {/* EMAIL */}
-        <a
-          href="mailto:bryanignatius379@gmail.com"
-          className="text-xs bg-blue-500/10 text-blue-400 mr-2 md:mr-4 inline-flex items-center gap-2 border border-gray-700 px-4 py-3 rounded-full hover:bg-blue-500 hover:text-black hover:border-blue-500 transition duration-300 block relative z-50"
-        >
-          <MdEmail className="text-lg" />
-          <span>bryanignatius379@gmail.com</span>
-        </a>
+          <p className="text-gray-400 text-sm mb-8">
+            Open to collaboration, automation consulting, and leadership roles.
+          </p>
 
-        {/* PHONE */}
-        <a
-          href="tel:+254793805140"
-          className="text-xs bg-blue-500/10 text-blue-400 mr-2 md:mr-4 inline-flex items-center gap-2 border border-gray-700 px-4 py-3 rounded-full hover:bg-blue-500 hover:text-black hover:border-blue-500 transition duration-300 block relative z-50"
-        >
-          <FaPhoneAlt className="text-sm" />
-          <span>+254793805140</span>
-        </a>
+          {/* CONTACT LINKS */}
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-10">
 
-        {/* LINKEDIN */}
-        <a
-          href="https://www.linkedin.com/in/brian-otieno-51b06a293/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xs bg-blue-500/10 text-blue-400 mr-2 md:mr-4 inline-flex items-center gap-2 border border-gray-700 px-4 py-3 rounded-full hover:bg-blue-500 hover:text-black hover:border-blue-500 transition duration-300 block relative z-50"
-        >
-          <FaLinkedin className="text-lg" />
-          <span>LinkedIn</span>
-        </a>
+            {/* EMAIL */}
+            <a
+              href="mailto:bryanignatius379@gmail.com"
+              className="inline-flex items-center gap-2 border border-gray-700 px-4 py-3 rounded-full bg-blue-500/10 text-blue-400 hover:bg-blue-500 hover:text-black transition"
+            >
+              <MdEmail />
+              <span className="text-sm">Email</span>
+            </a>
+
+            {/* PHONE */}
+            <a
+              href="tel:+254793805140"
+              className="inline-flex items-center gap-2 border border-gray-700 px-4 py-3 rounded-full bg-blue-500/10 text-blue-400 hover:bg-blue-500 hover:text-black transition"
+            >
+              <FaPhoneAlt />
+              <span className="text-sm">Phone</span>
+            </a>
+
+            {/* LINKEDIN */}
+            <a
+              href="https://www.linkedin.com/in/brian-otieno-51b06a293/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border border-gray-700 px-4 py-3 rounded-full bg-blue-500/10 text-blue-400 hover:bg-blue-500 hover:text-black transition"
+            >
+              <FaLinkedin />
+              <span className="text-sm">LinkedIn</span>
+            </a>
+
+          </div>
+
+          {/* CONTACT FORM */}
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="max-w-xl mx-auto space-y-4 text-left"
+          >
+
+            <input
+              type="text"
+              name="user_name"
+              placeholder="Your Name"
+              required
+              className="w-full px-4 py-3 rounded-lg bg-black/40 border border-gray-700 text-white"
+            />
+
+            <input
+              type="email"
+              name="user_email"
+              placeholder="Your Email"
+              required
+              className="w-full px-4 py-3 rounded-lg bg-black/40 border border-gray-700 text-white"
+            />
+
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              required
+              className="w-full px-4 py-3 rounded-lg bg-black/40 border border-gray-700 text-white"
+            />
+
+            <textarea
+              rows={4}
+              name="message"
+              placeholder="Your Message"
+              required
+              className="w-full px-4 py-3 rounded-lg bg-black/40 border border-gray-700 text-white"
+            />
+
+            <button
+              type="submit"
+              className="w-full py-3 rounded-lg bg-blue-500 text-black font-semibold hover:bg-blue-600 transition"
+            >
+              {loading ? "Sending..." : "Send Message"}
+            </button>
+
+            {success && (
+              <p className="text-green-400 text-sm text-center transition-opacity duration-500">
+                Message sent successfully ✅
+              </p>
+            )}
+
+          </form>
+
+          {/* COPYRIGHT */}
+          <p className="text-gray-500 text-xs mt-10">
+            © {new Date().getFullYear()} Brian Ignatious Otieno. All Rights Reserved.
+          </p>
 
         </div>
-      </motion.section>
-
-      {/* Footer */}
-      <footer className="mt-24 py-8 text-center border-t border-gray-800">
-        <p className="text-gray-400 text-sm">
-          © {new Date().getFullYear()} Brian Ignatious Otieno. All Rights Reserved.
-        </p>
       </footer>
 
     </div>
