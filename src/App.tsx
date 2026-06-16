@@ -3,12 +3,25 @@ import { motion } from "framer-motion";
 import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt, FaLinkedin } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 export default function App() {
   const form = useRef<HTMLFormElement | null>(null);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+
+  
+// ✅ NEW: show WhatsApp bubble after delay
+  const [showBubble, setShowBubble] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowBubble(true);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -46,6 +59,96 @@ export default function App() {
     <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 opacity-20 blur-3xl rounded-full"></div>
     <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-500 opacity-20 blur-3xl rounded-full"></div>
     <div className="max-w-5xl mx-auto px-6"></div>
+
+    
+{/* ✅ WHATSAPP FLOATING BUTTON */}
+      <a
+        href="https://wa.me/254793805140?text=Hello%20I%20am%20interested%20in%20doing%20collaboration"
+        className="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+          alt="WhatsApp"
+        />
+      </a>
+
+      {/* ✅ WHATSAPP POPUP BUBBLE */}
+      {showBubble && (
+        <div className="whatsapp-bubble">
+          Chat with Me 👋
+        </div>
+      )}
+
+      {/* ✅ STYLES */}
+      <style>{`
+        .whatsapp-float {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          width: 60px;
+          height: 60px;
+          background-color: #25D366;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          animation: pulse 1.8s infinite;
+          z-index: 1000;
+          cursor: pointer;
+        }
+
+        .whatsapp-float img {
+          width: 35px;
+          height: 35px;
+        }
+
+        .whatsapp-float:hover {
+          background-color: #1ebe5d;
+          transform: scale(1.1);
+          transition: 0.3s ease;
+        }
+
+        /* ✅ PULSE */
+        @keyframes pulse {
+          0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+          70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+          100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        /* ✅ CHAT BUBBLE */
+        .whatsapp-bubble {
+          position: fixed;
+          bottom: 90px;
+          right: 20px;
+          background: white;
+          color: black;
+          padding: 10px 14px;
+          border-radius: 20px;
+          font-size: 14px;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+          animation: fadeSlide 0.6s ease forwards;
+          z-index: 999;
+        }
+
+        /* ✅ BUBBLE ANIMATION */
+        @keyframes fadeSlide {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
+
+      {/* BACKGROUND EFFECTS */}
+      <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 opacity-20 blur-3xl rounded-full"></div>
+      <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-500 opacity-20 blur-3xl rounded-full"></div>
+
 
       
       {/* NAVBAR */}
